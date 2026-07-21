@@ -16,7 +16,7 @@ export const PROJECTS: Project[] = [
     description:
       'An automated CTI pipeline that collects, processes, and enriches threat data from multiple intelligence sources. Integrates IOC feeds and MITRE ATT&CK mapping to improve threat detection, correlation, and analysis for SOC monitoring and incident response.',
     tags: ['Threat Intel', 'MITRE ATT&CK', 'Automation'],
-    link: 'https://github.com/thiru011/threat-intelligencepipeline',
+    link: 'https://github.com/thiru011/threat-intelligence-pipeline',
     icon: 'network',
   },
   {
