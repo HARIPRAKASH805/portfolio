@@ -1,14 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
-import network from "../assets/marquee/network.png";
-import splunk from "../assets/marquee/splunk.png";
-import wazuh from "../assets/marquee/wazuh.png";
-import pipeline from "../assets/marquee/pipeline.png";
-import mitre from "../assets/marquee/mitre.png";
-import windowslab from "../assets/marquee/windowslab.png";
-import soclab from "../assets/marquee/soclab.png";
-import architecture from "../assets/marquee/architecture.png";
-import kali from "../assets/marquee/kali.png";
-import sysmon from "../assets/marquee/sysmon.png";
+import network from "../assets/marquee/network.webp";
+import splunk from "../assets/marquee/splunk.webp";
+import wazuh from "../assets/marquee/wazuh.webp";
+import pipeline from "../assets/marquee/pipeline.webp";
+import mitre from "../assets/marquee/mitre.webp";
+import windowslab from "../assets/marquee/windowslab.webp";
+import soclab from "../assets/marquee/soclab.webp";
+import architecture from "../assets/marquee/architecture.webp";
+import kali from "../assets/marquee/kali.webp";
+import sysmon from "../assets/marquee/sysmon.webp";
 
 const ALL_GIFS = [
   network,
