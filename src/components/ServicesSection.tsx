@@ -2,30 +2,34 @@ import FadeIn from './FadeIn';
 
 const SERVICES = [
   {
-    number: '01',
-    name: 'SIEM Tools',
-    description: 'Splunk, Wazuh -- log correlation, alert investigation, and security event monitoring.',
-  },
-  {
-    number: '02',
-    name: 'Threat Detection & IR',
+    number: "01",
+    name: "Security Operations",
     description:
-      'Incident response, log analysis, and threat hunting mapped against the MITRE ATT&CK framework and Cyber Kill Chain.',
+      "Splunk, Wazuh, SIEM monitoring, log analysis, incident response, detection engineering, and alert investigation.",
   },
   {
-    number: '03',
-    name: 'Networking & Protocols',
-    description: 'TCP/IP, OSI Model, DNS, DHCP, HTTP/S, NAT -- solid grounding in how traffic actually moves.',
+    number: "02",
+    name: "Threat Hunting",
+    description:
+      "MITRE ATT&CK, IOC analysis, Sigma rules, Windows Event Logs, Sysmon, endpoint monitoring, and proactive threat detection.",
   },
   {
-    number: '04',
-    name: 'Security Tooling',
-    description: 'Wireshark, Burp Suite, Nmap, Nessus for reconnaissance, scanning, and vulnerability assessment.',
+    number: "03",
+    name: "Governance, Risk & Compliance",
+    description:
+      "Risk assessment, ISO/IEC 27001 fundamentals, NIST Cybersecurity Framework, CIS Controls, security policies, compliance, and audit readiness.",
   },
   {
-    number: '05',
-    name: 'Governance, Risk & Compliance',
-    description: 'CIS benchmark compliance scans, system hardening, and security best-practice documentation.',
+    number: "04",
+    name: "Networking & Security",
+    description:
+      "TCP/IP, DNS, HTTP/S, SSH, VPN, firewalls, Wireshark, Nmap, Burp Suite, and secure network architecture.",
+  },
+  {
+    number: "05",
+    name: "Programming & Automation",
+    description:
+      "Python, PowerShell, Bash, Git, security scripting, automation, and VirtualBox lab environments.",
   },
 ];
 
