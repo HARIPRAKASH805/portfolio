@@ -60,18 +60,15 @@ export default function HeroSection() {
       </FadeIn>
 
       {/* Hero heading */}
-      <div className="relative z-20 overflow-hidden w-full mt-6 sm:mt-4 md:-mt-5" style={{ willChange: 'transform' }}>
-        <FadeIn delay={0.15} y={40} duration={0.9}>
-          <h1
-            className="hero-heading font-black tracking-tight leading-none w-full text-[12vw] sm:text-[10vw] md:text-[9vw] lg:text-[8vw]"
-            style={{ transform: 'translateZ(0)', backfaceVisibility: 'hidden' }}
-          >
-            Hi, I'm{' '}
-            <span className="bg-gradient-to-r from-yellow-300 via-amber-400 to-orange-500 bg-clip-text text-transparent">
-              Hariprakash P
-            </span>
-          </h1>
-        </FadeIn>
+      <div className="relative z-20 overflow-hidden w-full mt-6 sm:mt-4 md:-mt-5">
+        <h1
+          className="hero-heading font-black tracking-tight leading-none w-full text-[12vw] sm:text-[10vw] md:text-[9vw] lg:text-[8vw]"
+        >
+          Hi, I'm{' '}
+          <span className="bg-gradient-to-r from-yellow-300 via-amber-400 to-orange-500 bg-clip-text text-transparent">
+            Hariprakash P
+          </span>
+        </h1>
 
         <FadeIn delay={0.3} y={20}>
           <p className="font-mono text-accent text-sm sm:text-base md:text-lg mt-3 sm:mt-4 pl-1 h-6 sm:h-7">
