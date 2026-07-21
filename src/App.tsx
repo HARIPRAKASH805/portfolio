@@ -1,3 +1,7 @@
+import ExperienceSection from "./components/ExperienceSection";
+import CertificationsSection from "./components/CertificationsSection";
+import ContactSection from "./components/ContactSection";
+import Footer from "./components/Footer";
 import HeroSection from './components/HeroSection';
 import MarqueeSection from './components/MarqueeSection';
 import AboutSection from './components/AboutSection';
