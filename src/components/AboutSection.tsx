@@ -3,7 +3,7 @@ import AnimatedText from './AnimatedText';
 import ContactButton from './ContactButton';
 
 const ABOUT_TEXT =
-  "With more than five years of experience in design, i focus on branding, web design, and user experience, i truly enjoy working with businesses that aim to stand out and present their best image. Let's build something incredible together!";
+  "Aspiring cybersecurity professional specializing in Security Operations Center functions -- threat detection, log analysis, and security event monitoring. Skilled in SIEM tools, incident investigation, and threat intelligence through hands-on projects and lab simulations. Currently pursuing a B.E. in Computer Science & Engineering (Cybersecurity) at Dr. Mahalingam College of Engineering and Technology.";
 
 const DECOR = [
   {
