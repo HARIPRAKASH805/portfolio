@@ -25,31 +25,28 @@ const experiences = [
 
 export default function ExperienceSection() {
   return (
-    <section className="bg-[#0B0F19] py-24">
-      <div className="max-w-7xl mx-auto px-6">
-
+    <section className="bg-[#0C0C0C] py-20 sm:py-24 md:py-28 px-5 sm:px-8 md:px-10">
+      <div className="max-w-5xl mx-auto">
         <FadeIn>
-          <h2 className="text-5xl font-bold text-white mb-16 text-center">
+          <h2 className="hero-heading font-black uppercase text-center mb-14 sm:mb-16" style={{ fontSize: 'clamp(2.5rem, 8vw, 100px)' }}>
             Experience
           </h2>
         </FadeIn>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-2 gap-5 sm:gap-6">
           {experiences.map((item, index) => (
-            <FadeIn key={index} delay={index * 0.15}>
-              <div className="bg-[#151B28] rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-400 transition">
-                <h3 className="text-2xl font-bold text-cyan-400 mb-4">
+            <FadeIn key={index} delay={index * 0.12}>
+              <div className="rounded-2xl p-7 sm:p-8 h-full border border-[#D7E2EA]/15 hover:border-accent/40 transition-colors duration-300">
+                <h3 className="text-accent text-lg sm:text-xl font-semibold mb-3">
                   {item.title}
                 </h3>
-
-                <p className="text-gray-300 leading-7">
+                <p className="text-[#D7E2EA]/65 leading-relaxed text-sm sm:text-base">
                   {item.description}
                 </p>
               </div>
             </FadeIn>
           ))}
         </div>
-
       </div>
     </section>
   );
