@@ -36,7 +36,7 @@ export default function ExperienceSection() {
         <div className="grid sm:grid-cols-2 gap-5 sm:gap-6">
           {experiences.map((item, index) => (
             <FadeIn key={index} delay={index * 0.12}>
-              <div className="rounded-2xl p-7 sm:p-8 h-full border border-[#D7E2EA]/15 hover:border-accent/40 transition-colors duration-300">
+              <div className="glow-card rounded-2xl p-7 sm:p-8 h-full border border-[#D7E2EA]/15 hover:border-accent/40">
                 <h3 className="text-accent text-lg sm:text-xl font-semibold mb-3">
                   {item.title}
                 </h3>
