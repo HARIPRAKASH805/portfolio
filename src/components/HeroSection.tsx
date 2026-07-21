@@ -28,8 +28,12 @@ export default function HeroSection() {
       {/* Hero heading */}
       <div className="overflow-hidden w-full mt-6 sm:mt-4 md:-mt-5">
         <FadeIn delay={0.15} y={40}>
-          <h1 className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-[14vw] sm:text-[15vw] md:text-[16vw] lg:text-[17.5vw]">
-            Hi, i&apos;m HP
+          <h1 className="hero-heading font-black tracking-tight leading-none w-full text-[12vw] sm:text-[10vw] md:text-[9vw] lg:text-[8vw]">
+  Hi, I'm{" "}
+  <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(34,211,238,0.6)]">
+    Hariprakash P
+  </span>
+        </h1>
           </h1>
         </FadeIn>
       </div>
