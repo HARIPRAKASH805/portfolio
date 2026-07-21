@@ -3,40 +3,36 @@ import FadeIn from './FadeIn';
 const SERVICES = [
   {
     number: '01',
-    name: '3D Modeling',
-    description:
-      'Creation of detailed objects, characters, or environments tailored to specific client needs, ideal for games, products, and visualizations.',
+    name: 'SIEM Tools',
+    description: 'Splunk, Wazuh -- log correlation, alert investigation, and security event monitoring.',
   },
   {
     number: '02',
-    name: 'Rendering',
+    name: 'Threat Detection & IR',
     description:
-      'High-quality, photorealistic renders that showcase designs with custom lighting, textures, and materials to bring concepts to life.',
+      'Incident response, log analysis, and threat hunting mapped against the MITRE ATT&CK framework and Cyber Kill Chain.',
   },
   {
     number: '03',
-    name: 'Motion Design',
-    description:
-      'Dynamic animations and motion graphics that add energy and storytelling to brands, products, and digital experiences.',
+    name: 'Networking & Protocols',
+    description: 'TCP/IP, OSI Model, DNS, DHCP, HTTP/S, NAT -- solid grounding in how traffic actually moves.',
   },
   {
     number: '04',
-    name: 'Branding',
-    description:
-      "Crafting cohesive visual identities -- from logos to full brand systems -- that communicate a clear and memorable presence.",
+    name: 'Security Tooling',
+    description: 'Wireshark, Burp Suite, Nmap, Nessus for reconnaissance, scanning, and vulnerability assessment.',
   },
   {
     number: '05',
-    name: 'Web Design',
-    description:
-      'Designing clean, modern, and conversion-focused websites with attention to layout, typography, and user experience.',
+    name: 'Governance, Risk & Compliance',
+    description: 'CIS benchmark compliance scans, system hardening, and security best-practice documentation.',
   },
 ];
 
 export default function ServicesSection() {
   return (
     <section
-      id="price"
+      id="skills"
       className="bg-white rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32"
     >
       <FadeIn delay={0} y={40}>
@@ -44,7 +40,7 @@ export default function ServicesSection() {
           className="text-[#0C0C0C] font-black uppercase text-center mb-16 sm:mb-20 md:mb-28"
           style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
         >
-          Services
+          Skills
         </h2>
       </FadeIn>
 
