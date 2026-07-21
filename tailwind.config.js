@@ -10,6 +10,7 @@ export default {
         bg: '#0C0C0C',
         ink: '#0C0C0C',
         mist: '#D7E2EA',
+        accent: '#22D3EE',
       },
     },
   },
