@@ -1,17 +1,51 @@
+import { useEffect, useState } from 'react';
 import FadeIn from './FadeIn';
 import Magnet from './Magnet';
 import ContactButton from './ContactButton';
 
 const NAV_LINKS = ['About', 'Skills', 'Projects', 'Contact'];
+const ROLES = ['Cybersecurity Engineer', 'SOC Analyst', 'GRC Analyst', 'Threat Hunter'];
+
+function useTypingRotation(words: string[], typeSpeed = 70, pause = 1400) {
+  const [text, setText] = useState('');
+  const [wordIndex, setWordIndex] = useState(0);
+  const [deleting, setDeleting] = useState(false);
+
+  useEffect(() => {
+    const current = words[wordIndex];
+    let timeout: ReturnType<typeof setTimeout>;
+
+    if (!deleting && text.length < current.length) {
+      timeout = setTimeout(() => setText(current.slice(0, text.length + 1)), typeSpeed);
+    } else if (!deleting && text.length === current.length) {
+      timeout = setTimeout(() => setDeleting(true), pause);
+    } else if (deleting && text.length > 0) {
+      timeout = setTimeout(() => setText(current.slice(0, text.length - 1)), typeSpeed / 2);
+    } else {
+      setDeleting(false);
+      setWordIndex((wordIndex + 1) % words.length);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [text, deleting, wordIndex, words, typeSpeed, pause]);
+
+  return text;
+}
 
 export default function HeroSection() {
+  const typed = useTypingRotation(ROLES);
+
   return (
     <section
-      className="relative h-screen flex flex-col"
+      className="relative h-screen flex flex-col overflow-hidden"
       style={{ overflowX: 'clip' }}
     >
+      {/* Cyber grid + scanline background */}
+      <div className="absolute inset-0 cyber-grid pointer-events-none" />
+      <div className="scanline pointer-events-none" />
+
       {/* Navbar */}
-      <FadeIn delay={0} y={-20} as="nav">
+      <FadeIn delay={0} y={-20} as="nav" className="relative z-20">
         <div className="flex justify-between px-6 md:px-10 pt-6 md:pt-8">
           {NAV_LINKS.map((link) => (
             <a
@@ -25,18 +59,25 @@ export default function HeroSection() {
         </div>
       </FadeIn>
 
-     {/* Hero heading */}
-<div className="overflow-hidden w-full mt-6 sm:mt-4 md:-mt-5">
-  <FadeIn delay={0.15} y={40}>
-    <h1 className="hero-heading font-black tracking-tight leading-none w-full text-[12vw] sm:text-[10vw] md:text-[9vw] lg:text-[8vw]">
-      
-      Hi, I'm{" "}
- <span className="bg-gradient-to-r from-yellow-300 via-amber-400 to-orange-500 bg-clip-text text-transparent">        
-   Hariprakash P
-      </span>
-    </h1>
-  </FadeIn>
-</div>
+      {/* Hero heading */}
+      <div className="relative z-20 overflow-hidden w-full mt-6 sm:mt-4 md:-mt-5">
+        <FadeIn delay={0.15} y={40}>
+          <h1 className="hero-heading font-black tracking-tight leading-none w-full text-[12vw] sm:text-[10vw] md:text-[9vw] lg:text-[8vw]">
+            Hi, I'm{' '}
+            <span className="bg-gradient-to-r from-yellow-300 via-amber-400 to-orange-500 bg-clip-text text-transparent">
+              Hariprakash P
+            </span>
+          </h1>
+        </FadeIn>
+
+        <FadeIn delay={0.3} y={20}>
+          <p className="font-mono text-accent text-sm sm:text-base md:text-lg mt-3 sm:mt-4 pl-1 h-6 sm:h-7">
+            {typed}
+            <span className="blinking-cursor">_</span>
+          </p>
+        </FadeIn>
+      </div>
+
       {/* Hero monogram badge */}
       <FadeIn
         delay={0.6}
@@ -73,15 +114,15 @@ export default function HeroSection() {
       <div className="mt-auto flex justify-between items-end pb-7 sm:pb-8 md:pb-10 px-6 md:px-10 relative z-20">
         <FadeIn delay={0.35} y={20}>
           <p
-  className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[260px]"
-  style={{ fontSize: "clamp(0.75rem,1.4vw,1.3rem)" }}
->
-  Cybersecurity Engineer
-  <br />
-  SOC Analyst • GRC Analyst
-  <br />
-  Threat Hunting • SIEM • Risk Management
-</p>
+            className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[260px]"
+            style={{ fontSize: 'clamp(0.75rem,1.4vw,1.3rem)' }}
+          >
+            Cybersecurity Engineer
+            <br />
+            SOC Analyst • GRC Analyst
+            <br />
+            Threat Hunting • SIEM • Risk Management
+          </p>
         </FadeIn>
         <FadeIn delay={0.5} y={20}>
           <ContactButton />
