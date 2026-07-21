@@ -15,7 +15,11 @@ export default function App() {
       <MarqueeSection />
       <AboutSection />
       <ServicesSection />
+      <ExperienceSection />
       <ProjectsSection />
+      <CertificationsSection />
+      <ContactSection />
+      <Footer />
     </div>
   );
 }
