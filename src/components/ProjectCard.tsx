@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { ShieldCheck, Network, Terminal } from 'lucide-react';
 import LiveProjectButton from './LiveProjectButton';
 import { Project } from '../data/projects';
 
@@ -9,9 +10,16 @@ interface ProjectCardProps {
   totalCards: number;
 }
 
+const ICONS = {
+  shield: ShieldCheck,
+  network: Network,
+  terminal: Terminal,
+};
+
 export default function ProjectCard({ project, index, totalCards }: ProjectCardProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const targetScale = 1 - (totalCards - 1 - index) * 0.03;
+  const Icon = ICONS[project.icon];
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -44,34 +52,47 @@ export default function ProjectCard({ project, index, totalCards }: ProjectCardP
               </span>
             </div>
           </div>
-          <LiveProjectButton />
+          <LiveProjectButton href={project.link} />
         </div>
 
-        {/* Bottom row — image grid */}
-        <div className="flex gap-3">
-          <div className="flex flex-col gap-3" style={{ width: '40%' }}>
-            <img
-              src={project.col1Image1}
-              alt={`${project.name} preview 1`}
-              loading="lazy"
-              className="w-full object-cover rounded-[40px] sm:rounded-[50px] md:rounded-[60px]"
-              style={{ height: 'clamp(130px, 16vw, 230px)' }}
-            />
-            <img
-              src={project.col1Image2}
-              alt={`${project.name} preview 2`}
-              loading="lazy"
-              className="w-full object-cover rounded-[40px] sm:rounded-[50px] md:rounded-[60px]"
-              style={{ height: 'clamp(160px, 22vw, 340px)' }}
+        {/* Bottom row -- icon visual + description */}
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-stretch">
+          <div
+            className="flex items-center justify-center rounded-[40px] sm:rounded-[50px] md:rounded-[60px] flex-shrink-0"
+            style={{
+              width: '100%',
+              maxWidth: '220px',
+              minHeight: '160px',
+              background:
+                'radial-gradient(circle at 30% 25%, rgba(215,226,234,0.14) 0%, rgba(12,12,12,0.5) 70%)',
+              border: '1px solid rgba(215,226,234,0.2)',
+            }}
+          >
+            <Icon
+              size={64}
+              strokeWidth={1.25}
+              className="text-[#D7E2EA]"
+              style={{ filter: 'drop-shadow(0 0 24px rgba(187,204,215,0.35))' }}
             />
           </div>
-          <div style={{ width: '60%' }}>
-            <img
-              src={project.col2Image}
-              alt={`${project.name} preview 3`}
-              loading="lazy"
-              className="w-full h-full object-cover rounded-[40px] sm:rounded-[50px] md:rounded-[60px]"
-            />
+          <div className="flex flex-col justify-center gap-4 flex-1">
+            <p
+              className="text-[#D7E2EA]/80 font-light leading-relaxed"
+              style={{ fontSize: 'clamp(0.85rem, 1.4vw, 1.1rem)' }}
+            >
+              {project.description}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {project.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-[#D7E2EA] uppercase tracking-wider text-xs font-medium px-3 py-1.5 rounded-full"
+                  style={{ border: '1px solid rgba(215,226,234,0.3)' }}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </motion.div>
