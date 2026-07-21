@@ -73,7 +73,7 @@ export default function HeroSection() {
         <FadeIn delay={0.3} y={20}>
           <p className="font-mono text-accent text-sm sm:text-base md:text-lg mt-3 sm:mt-4 pl-1 h-6 sm:h-7">
             {typed}
-            <span className="blinking-cursor">_</span>
+            <span className="type-cursor font-bold">|</span>
           </p>
         </FadeIn>
       </div>
