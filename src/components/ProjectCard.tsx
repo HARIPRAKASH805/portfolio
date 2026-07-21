@@ -31,7 +31,7 @@ export default function ProjectCard({ project, index, totalCards }: ProjectCardP
   return (
     <div ref={containerRef} className="h-[85vh]" style={{ position: 'relative' }}>
       <motion.div
-        className="sticky top-24 md:top-32 rounded-[40px] sm:rounded-[50px] md:rounded-[60px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-4 sm:p-6 md:p-8"
+        className="sticky top-24 md:top-32 rounded-[40px] sm:rounded-[50px] md:rounded-[60px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-4 sm:p-6 md:p-8 transition-shadow duration-300 hover:shadow-[0_0_50px_rgba(34,211,238,0.15)]"
         style={{ scale, top: `calc(6rem + ${index * 28}px)` }}
       >
         {/* Top row */}
