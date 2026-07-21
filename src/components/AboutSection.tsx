@@ -3,7 +3,7 @@ import AnimatedText from './AnimatedText';
 import ContactButton from './ContactButton';
 
 const ABOUT_TEXT =
-  "Aspiring cybersecurity professional specializing in Security Operations Center functions -- threat detection, log analysis, and security event monitoring. Skilled in SIEM tools, incident investigation, and threat intelligence through hands-on projects and lab simulations. Currently pursuing a B.E. in Computer Science & Engineering (Cybersecurity) at Dr. Mahalingam College of Engineering and Technology.";
+  "I'm a Cybersecurity Engineer with interests in both Security Operations (SOC) and Governance, Risk & Compliance (GRC). I build hands-on SOC labs using Splunk, Wazuh, Sysmon, and MITRE ATT&CK to detect, investigate, and respond to cyber threats. Alongside technical security, I'm expanding my knowledge of risk management, security governance, compliance frameworks, and audit readiness. My goal is to bridge defensive security operations with strong governance practices to help organizations improve their overall security posture.";
 
 const DECOR = [
   {
