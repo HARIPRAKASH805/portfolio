@@ -13,7 +13,7 @@ export default function ProjectsSection() {
           className="hero-heading font-black uppercase text-center mb-16 sm:mb-20 md:mb-28"
           style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
         >
-          Project
+          Projects
         </h2>
       </FadeIn>
 
