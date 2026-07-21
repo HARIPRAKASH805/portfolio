@@ -20,7 +20,7 @@ export default function CertificationsSection() {
         <div className="grid sm:grid-cols-2 gap-5 sm:gap-6">
           {certs.map((cert, index) => (
             <FadeIn key={index} delay={index * 0.12}>
-              <div className="rounded-2xl p-7 sm:p-8 text-center border border-[#D7E2EA]/15 hover:border-accent/40 hover:-translate-y-1 transition-all duration-300">
+              <div className="glow-card rounded-2xl p-7 sm:p-8 text-center border border-[#D7E2EA]/15 hover:border-accent/40">
                 <h3 className="text-accent text-base sm:text-lg font-semibold">
                   {cert}
                 </h3>
