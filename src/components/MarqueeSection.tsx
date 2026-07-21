@@ -1,9 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 
-import glasshouse from "../assets/marquee/glasshouse.png";
+import glasshouse from "../assets/marquee/network.png";
 import splunk from "../assets/marquee/splunk.png";
 import wazuh from "../assets/marquee/wazuh.png";
-import threathunting from "../assets/marquee/threathunting.png";
 import pipeline from "../assets/marquee/pipeline.png";
 import mitre from "../assets/marquee/mitre.png";
 import windowslab from "../assets/marquee/windowslab.png";
@@ -13,10 +12,9 @@ import kali from "../assets/marquee/kali.png";
 import sysmon from "../assets/marquee/sysmon.png";
 
 const ALL_GIFS = [
-  glasshouse,
+  network,
   splunk,
   wazuh,
-  threathunting,
   pipeline,
   mitre,
   windowslab,
