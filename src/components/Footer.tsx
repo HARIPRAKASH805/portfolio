@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
-    <footer className="bg-black py-8 border-t border-gray-800">
+    <footer className="bg-[#0C0C0C] py-8 border-t border-[#D7E2EA]/10">
 
-      <div className="text-center text-gray-400">
+      <div className="text-center text-[#D7E2EA]/50 text-sm">
 
         <p>Designed & Developed by Hariprakash P</p>
 
